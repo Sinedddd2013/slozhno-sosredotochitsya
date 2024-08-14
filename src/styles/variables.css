@@ -1,0 +1,14 @@
+/*
+  Переменные для вашего проекта
+  и их переопределение под различные устройства
+*/
+
+:root {
+  --h1-title-color: #DB00FF;
+  --title-text-color: #FF0070;
+  --decorated-text-color: #000028;
+  --decor-color: #FF0070;
+  --main-text-color: #F1B2CE;
+  --opacity-border-color-button: rgba(255, 0, 112, 0.4);
+  --text-shadow-color: #FF0070;
+}
