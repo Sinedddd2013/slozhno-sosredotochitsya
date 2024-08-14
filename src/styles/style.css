@@ -51,7 +51,7 @@
   cursor: pointer;
   text-transform: lowercase;
   font-size: 18px;
-  color: var(--decor-color);
+  color: var(--title-text-color);
   padding: 2px 13px;
 }
 .header__theme-menu-button:hover {
@@ -59,11 +59,11 @@
   outline: 1px solid var(--opacity-border-color-button);
 }
 .header__theme-menu-button:focus-visible {
-  outline: 1px solid var(--decor-color);
-  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--title-text-color);
 }
-.header__theme-menu-button_active{
-  outline: 1px solid var(--decor-color);
+.header__theme-menu-button_active {
+  outline: 1px solid var(--title-text-color);
   pointer-events: none;
   cursor: none;
 }
@@ -77,11 +77,11 @@
   right: 48px;
   top: 20px;
 }
-.rec-text::after{
+.rec-text::after {
   content: "";
   display: inline-block;
   position: absolute;
-  top:7px;
+  top: 7px;
   right: -20px;
   width: 12px;
   height: 12px;
@@ -110,7 +110,7 @@
   color: var(--decorated-text-color);
 }
 
-.articles{
+.articles {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-top: 60px;
@@ -118,7 +118,7 @@
   padding: 0 20px;
   gap: 18px;
 }
-.grid-fractions_x2{
+.grid-fractions_x2 {
   grid-column: 2 / span 2;
 }
 .grid-fractions_x3 {
@@ -129,7 +129,7 @@
   margin-bottom: 2px;
 }
 .article__title,
-.article__item-title{
+.article__item-title {
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 10px;
@@ -156,7 +156,7 @@
 }
 .anchor-text {
   text-decoration: none;
-  text-shadow: 4px 4px 0 var(--decor-color);
+  text-shadow: 2px 2px 0 var(--decor-color);
 }
 .anchor-text:hover {
   text-decoration: underline;
@@ -165,8 +165,9 @@
   border: none;
   outline: none;
 }
-.anchor-text:focus-within {
+.anchor-text:focus-visible {
   outline: 1px solid var(--main-text-color);
+  outline-offset: 0;
 }
 .article_with_images {
   gap: 20px;
@@ -187,13 +188,13 @@
 .height-1col-2fr {
   grid-row: 3 / span 2;
 }
-.width-2col-_2fr{
+.width-2col-_2fr {
   grid-column: 2 / span 2;
 }
 .mb_0 {
   margin-bottom: 0;
 }
-.footer{
+.footer {
   height: 100vh;
   display: grid;
   justify-content: center;
@@ -265,13 +266,13 @@
   .article__title {
     margin-bottom: 0;
   }
-  .width_33{
+  .width_33 {
     width: 100%;
   }
   .article__item {
     margin-bottom: 0;
-}
-.article_with_images {
-  gap: 10px;
-}
+  }
+  .article_with_images {
+    gap: 10px;
+  }
 }

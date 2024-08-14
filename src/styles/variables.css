@@ -4,11 +4,11 @@
 */
 
 :root {
-  --h1-title-color: #DB00FF;
-  --title-text-color: #FF0070;
+  --h1-title-color: #db00ff;
+  --title-text-color: #ff0070;
   --decorated-text-color: #000028;
-  --decor-color: #FF0070;
-  --main-text-color: #F1B2CE;
+  --decor-color: #ff0070;
+  --main-text-color: #f1b2ce;
   --opacity-border-color-button: rgba(255, 0, 112, 0.4);
-  --text-shadow-color: #FF0070;
+  --text-shadow-color: #ff0070;
 }
