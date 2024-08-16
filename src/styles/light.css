@@ -4,6 +4,7 @@
   переключая тему
 */
 
+
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
@@ -27,7 +28,6 @@
 .page.theme_light .rec-text {
   display: none;
 }
-
 @media (prefers-color-scheme: light) {
   :root {
     /* Дублируем переменные светлой темы */
@@ -42,7 +42,5 @@
   .page {
     background-image: url(../images/cover-image-light.png);
   }
-  .page.theme_auto .rec-text {
-    display: none;
-  }
+
 }

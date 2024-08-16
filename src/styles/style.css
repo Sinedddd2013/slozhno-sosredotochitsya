@@ -18,27 +18,49 @@
 .decorated-zone {
   position: relative;
 }
-.decorated-zone::before {
+.decorated-zone::before, 
+.decorated-zone::after  {
   content: "";
   display: block;
   position: absolute;
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--decor-color);
-  border-left: 1px solid var(--decor-color);
+}
+.decorated-zone::before {
   bottom: 20px;
   left: 20px;
+  border-bottom: 1px solid var(--decor-color);
+  border-left: 1px solid var(--decor-color);
 }
 .decorated-zone::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 25px;
-  height: 25px;
   border-top: 1px solid var(--decor-color);
   border-right: 1px solid var(--decor-color);
   top: 20px;
   right: 20px;
+}
+.rec-text {
+  display: none;
+}
+.rec-text {
+  position: absolute;
+  min-width: 33px;
+  min-height: 26px;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: var(--decor-color);
+  right: 48px;
+  top: 20px;
+}
+.rec-text::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 7px;
+  right: -20px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--decor-color);
+  border-radius: 50%;
 }
 .header__theme-menu-list {
   display: flex;
@@ -58,6 +80,10 @@
   border: none;
   outline: 1px solid var(--opacity-border-color-button);
 }
+.header__theme-menu-button:focus {
+  outline: none;
+  border: none;
+}
 .header__theme-menu-button:focus-visible {
   outline: none;
   border-bottom: 1px solid var(--title-text-color);
@@ -67,27 +93,7 @@
   pointer-events: none;
   cursor: none;
 }
-.rec-text {
-  position: absolute;
-  width: 33px;
-  height: 26px;
-  text-transform: uppercase;
-  font-size: 18px;
-  color: var(--decor-color);
-  right: 48px;
-  top: 20px;
-}
-.rec-text::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: 7px;
-  right: -20px;
-  width: 12px;
-  height: 12px;
-  background-color: var(--decor-color);
-  border-radius: 50%;
-}
+
 .header__main-title {
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   color: var(--h1-title-color);
@@ -118,10 +124,10 @@
   padding: 0 20px;
   gap: 18px;
 }
-.grid-fractions_x2 {
+.width-two-grids {
   grid-column: 2 / span 2;
 }
-.grid-fractions_x3 {
+.width-full {
   grid-column: 1 / span 3;
 }
 
@@ -137,13 +143,13 @@
 .article__title {
   color: var(--title-text-color);
 }
-.width_33 {
+.width-third-part {
   width: 33%;
 }
-.mb_2 {
+.margin-bot-small {
   margin-bottom: 2px;
 }
-.mb_20 {
+.margin-bot-big {
   margin-bottom: 20px;
 }
 .article__item-text {
@@ -151,15 +157,24 @@
   font-size: 18px;
   line-height: 23.4px;
 }
+.article__item-text:not(:first-of-type) {
+  margin-top: 8px;
+}
 .article__item-title__thin-text {
   font-weight: 400;
 }
 .anchor-text {
+  position: relative;
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--decor-color);
 }
-.anchor-text:hover {
-  text-decoration: underline;
+.anchor-text:hover::after{
+  content: "";
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  border-bottom: 1px solid currentColor;
 }
 .anchor-text:focus {
   border: none;
@@ -178,20 +193,20 @@
   object-fit: cover;
   object-position: center;
 }
-.width-1col-_2fr {
+.width_start-col_two-blocks {
   grid-column: span 2;
 }
-.height-3col-2fr {
+.height_two-blocks_col-end {
   grid-row: 2 / span 2;
   grid-column: 3;
 }
-.height-1col-2fr {
+.height_two-blocks_col-start {
   grid-row: 3 / span 2;
 }
-.width-2col-_2fr {
+.width_two-blocks_col-mid {
   grid-column: 2 / span 2;
 }
-.mb_0 {
+.margin-none {
   margin-bottom: 0;
 }
 .footer {
@@ -216,11 +231,17 @@
   .header__main-title-description {
     margin-top: 38px;
   }
-  .grid_fr_x3_small-screen {
+  .full-width_small-screen {
     grid-column: 1 / span 3;
   }
-  .width_33 {
+  .width-third-part {
     width: 25%;
+  }
+  .pad-left-seven-points {
+    padding-left: 7px;
+  }
+  .article_with_images {
+    margin-bottom: 50px;
   }
 }
 @media (max-width: 566px) {
@@ -228,9 +249,6 @@
     padding: 10px;
   }
   .header__theme-menu-list {
-    flex-direction: column;
-    align-items: end;
-    gap: 10px;
     padding-top: 62px;
     padding-right: 0;
   }
@@ -266,13 +284,17 @@
   .article__title {
     margin-bottom: 0;
   }
-  .width_33 {
+  .width-third-part {
     width: 100%;
   }
   .article__item {
     margin-bottom: 0;
   }
   .article_with_images {
-    gap: 10px;
+    gap: 6px;
+    margin-bottom: 40px;
+  }
+  .pad-left-seven-points {
+    padding-left: 0;
   }
 }

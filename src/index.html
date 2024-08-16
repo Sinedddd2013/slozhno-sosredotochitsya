@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/dark.css" />
     <link rel="stylesheet" href="./styles/light.css" />
+
   </head>
   <body class="page">
     <header class="header decorated-zone">
@@ -43,7 +44,7 @@
           </li>
         </ul>
       </nav>
-      <div class="rec-text" aria-hidden="true">Rec</div>
+      <span class="rec-text" aria-hidden="true">Rec</span>
 
       <h1 class="header__main-title">no focus</h1>
       <p class="header__main-title-description decorated-text">
@@ -53,11 +54,9 @@
     </header>
 
     <main>
-      <article class="articles">
-        <div class="article__item">
-          <h2 class="article__title">Почему сосредоточиться так сложно</h2>
-        </div>
-        <div class="article__item grid-fractions_x2">
+      <section class="articles">
+        <h2 class="article__title">Почему сосредоточиться так сложно</h2>
+        <article class="article__item width-two-grids pad-left-seven-points">
           <h3 class="article__item-title decorated-text">Многозадачность</h3>
           <p class="article__item-text">
             Особенно сложно сосредоточиться, когда задач много и все они —
@@ -70,8 +69,8 @@
             выделяет кортизол и адреналин — «гормоны стресса». Из-за этого мы
             работаем невнимательно: ошибаемся и быстро устаём.
           </p>
-        </div>
-        <div class="article__item grid-fractions_x2">
+        </article>
+        <article class="article__item width-two-grids pad-left-seven-points">
           <h3 class="article__item-title decorated-text">Дофамин</h3>
           <p class="article__item-text">
             С гормонами стресса всё понятно, но дальше — ещё интереснее. В нашей
@@ -83,14 +82,14 @@
             удовольствие. Получается замкнутый круг: чем больше отвлекаешься,
             тем больше удовольствия получаешь.
           </p>
-        </div>
-      </article>
+        </article>
+      </section>
 
-      <article class="articles">
-        <h2 class="article__title mb_2 width_33 grid-fractions_x3">
+      <section class="articles">
+        <h2 class="article__title margin-bot-small width-third-part width-full">
           Что снижает концентрацию внимания?
         </h2>
-        <div class="article__item grid_fr_x3_small-screen">
+        <article class="article__item full-width_small-screen">
           <h3 class="article__item-title decorated-text">Многозадачность</h3>
           <p class="article__item-text">
             Как концентрация может снижаться из-за… концентрации? Любая
@@ -100,8 +99,8 @@
             — невозможно. Концентрация — мышца, и она может не выдержать, если
             не давать ей отдохнуть.
           </p>
-        </div>
-        <div class="article__item grid_fr_x3_small-screen">
+        </article>
+        <article class="article__item full-width_small-screen">
           <h3 class="article__item-title decorated-text">Еда</h3>
           <p class="article__item-text">
             «Быстрые углеводы» — сахар, белый хлеб, сладости — молниеносно
@@ -111,8 +110,8 @@
             заканчивается, мы чувствуем усталость и сонливость. И хотим ещё
             больше быстрых углеводов.
           </p>
-        </div>
-        <div class="article__item grid_fr_x3_small-screen">
+        </article>
+        <article class="article__item full-width_small-screen">
           <h3 class="article__item-title decorated-text">Гаджеты</h3>
           <p class="article__item-text">
             Да-да, это та самая ситуация, когда на экране ноутбука — код, в
@@ -123,20 +122,18 @@
             что чем больше времени мы проводим в гаджетах, тем больше времени
             затем нужно, чтобы вернуться к работе.
           </p>
-        </div>
-      </article>
+        </article>
+      </section>
 
-      <article class="articles">
-        <div class="article__item">
+      <section class="articles">
           <h2 class="article__title">
             Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх
             секунд)
           </h2>
-        </div>
-        <div class="article__item grid-fractions_x2">
-          <h3 class="article__item-title mb_20 decorated-text">
+        <div class="article__item width-two-grids pad-left-seven-points">
+          <p class="article__item-title margin-bot-big decorated-text">
             5 простых (на самом деле не очень) советов
-          </h3>
+          </p>
           <h4
             class="article__item-title article__item-title__thin-text decorated-text"
           >
@@ -153,7 +150,7 @@
             проблемах из будущего.
           </p>
         </div>
-        <div class="article__item grid-fractions_x2">
+        <div class="article__item width-two-grids pad-left-seven-points">
           <h4
             class="article__item-title article__item-title__thin-text decorated-text"
           >
@@ -166,7 +163,7 @@
             попробовать включить плейлист в «белым шумом» или нейромузыкой.
           </p>
         </div>
-        <div class="article__item grid-fractions_x2">
+        <div class="article__item width-two-grids pad-left-seven-points">
           <h4
             class="article__item-title article__item-title__thin-text decorated-text"
           >
@@ -182,10 +179,8 @@
             прогулка — тоже отличный вариант.
           </p>
         </div>
-        <div class="article__item grid-fractions_x2">
-          <h4
-            class="article__item-title article__item-title__thin-text decorated-text"
-          >
+        <div class="article__item width-two-grids pad-left-seven-points">
+          <h4 class="article__item-title article__item-title__thin-text decorated-text">
             Хорошо ешьте
           </h4>
           <p class="article__item-text">
@@ -195,7 +190,7 @@
             фасоль), коричневый рис, хлеб из цельнозерновой пшеницы.
           </p>
         </div>
-        <div class="article__item grid-fractions_x2">
+        <div class="article__item width-two-grids pad-left-seven-points">
           <h4
             class="article__item-title article__item-title__thin-text decorated-text"
           >
@@ -208,31 +203,34 @@
             часов и круто тренирует направленное внимание.
           </p>
         </div>
-      </article>
+      </section>
 
-      <article class="articles article_with_images">
-        <h2 class="article__item-title grid-fractions_x3 decorated-text mb_0">
+      <section class="articles article_with_images">
+        <h2 class="article__item-title width-full decorated-text margin-none">
           А можно в картинках?
         </h2>
-        <div class="article__item width-1col-_2fr">
+        <div class="article__item width_start-col_two-blocks">
           <img
             src="./images/sunset.png"
             alt="Закат в мультяшном стиле"
             class="color_images"
+            loading="lazy"
           />
         </div>
-        <div class="article__item height-3col-2fr">
+        <div class="article__item height_two-blocks_col-end">
           <img
             src="./images/ice-cream.png"
             alt="Шарики мороженого в тарелке"
             class="color_images"
+            loading="lazy"
           />
         </div>
-        <div class="article__item height-1col-2fr">
+        <div class="article__item height_two-blocks_col-start">
           <img
             src="./images/tape.png"
             alt="Аудиокассета в мультяшном стиле"
             class="color_images"
+            loading="lazy"
           />
         </div>
         <div class="article__item">
@@ -240,16 +238,18 @@
             src="./images/books.png"
             alt="Стопка книг с чашкой на них"
             class="color_images"
+            loading="lazy"
           />
         </div>
-        <div class="article__item width-2col-_2fr">
+        <div class="article__item width_two-blocks_col-mid">
           <img
             src="./images/street.png"
             alt="Улица со зданиями по бокам в фиолетовых цветах"
             class="color_images"
+            loading="lazy"
           />
         </div>
-      </article>
+      </section>
     </main>
 
     <footer class="footer decorated-zone">
