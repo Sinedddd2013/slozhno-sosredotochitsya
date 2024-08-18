@@ -17,6 +17,7 @@
   --main-text-color: #353430;
   --opacity-border-color-button: rgba(50, 49, 45, 0.4);
   --text-shadow-color: #ffc2e6;
+  --decor-angles-color: #353430;
 
   background-color: #fff1f7;
   background-image: url(../images/cover-image-light.png);
@@ -38,6 +39,7 @@
     --main-text-color: #353430;
     --opacity-border-color-button: rgba(50, 49, 45, 0.4);
     --text-shadow-color: #ffc2e6;
+    --decor-angles-color: #353430;
   }
   .page {
     background-image: url(../images/cover-image-light.png);
