@@ -259,8 +259,12 @@
     padding-top: 172px;
     padding-right: 20px;
   }
+  .header__main-title {
+    padding-bottom: 16px;
+  }
   .header__main-title-description {
-    margin-top: 38px;
+    margin-top: 36px;
+    padding: 2px 0;
   }
   .full-width_small-screen {
     grid-column: 1 / span 3;
@@ -273,6 +277,7 @@
   }
   .article_with_images {
     margin-bottom: 50px;
+    margin-top: 80px;
     gap: 20px;
     display: grid;
     grid-template-rows: min-content 192px 230px 318px;
